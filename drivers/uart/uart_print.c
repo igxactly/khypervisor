@@ -1,4 +1,4 @@
-#include "../../platform-device/pc/k-hypervisor-config.h"
+#include <k-hypervisor-config.h>
 #include "arch_types.h"
 
 

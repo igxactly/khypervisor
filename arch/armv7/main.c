@@ -4,13 +4,13 @@
 #include <vdev.h>
 #include <memory.h>
 #include <gic_regs.h>
-#include <test/tests.h>
+#include <tools/tests_hypervisor/tests.h>
 #include <smp.h>
-#include "../guestbuilding/pc/k-hypervisor-config.h"
+#include <k-hypervisor-config.h>
 
 #define DEBUG
 #include "hvmm_trace.h"
-#include <log/uart_print.h>
+#include <lib/uart_print.h>
 
 
 #define PLATFORM_BASIC_TESTS 4

@@ -1,11 +1,11 @@
 #include <serial_s5p.h>
-#include <log/uart_print.h>
+#include <lib/uart_print.h>
 #define DEBUG
-#include <log/print.h>
+#include <lib/print.h>
 #include <gdb_stub.h>
 #include <asm-arm_inline.h>
 #include <guest_monitor.h>
-#include <log/sscanf.h>
+#include <lib/sscanf.h>
 #include <guest_monitor.h>
 
 #define DEMO

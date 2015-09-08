@@ -1,8 +1,8 @@
 #include <interrupt.h>
 #include <gic.h>
 #include <vgic.h>
-#include <log/print.h>
-#include <log/uart_print.h>
+#include <lib/print.h>
+#include <lib/uart_print.h>
 
 static struct vgic_status _vgic_status[NUM_GUESTS_STATIC];
 

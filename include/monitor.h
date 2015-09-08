@@ -1,7 +1,7 @@
 #ifndef _MONITORING_H__
 #define _MONITORING_H__
 
-#include <log/uart_print.h>
+#include <lib/uart_print.h>
 #include <hvmm_types.h>
 #include <arch_types.h>
 #include <guest.h>

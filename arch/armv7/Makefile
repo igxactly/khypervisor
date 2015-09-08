@@ -16,10 +16,15 @@ else
 include config-default.mk
 endif
 
-HYPERVISOR_SOURCE_DIR=../../hypervisor
-HYPERVISOR_HW_DIR=../../hypervisor/hardware/arm32ve
-HYPERVISOR_HW_HWLIB_DIR=../../hypervisor/hardware/arm32ve/libhw
-COMMON_SOURCE_DIR=../../common
+HYPERVISOR_HW_DIR=.
+HYPERVISOR_HW_HWLIB_DIR=$(HYPERVISOR_HW_DIR)/libhw
+
+SOURCE_ROOT=../..
+BUILD_DIR=$(SOURCE_ROOT)/build
+
+LIB_DIR=$(SOURCE_ROOT)/lib
+HYPERVISOR_SOURCE_DIR=$(SOURCE_ROOT)/hypervisor
+HYPERVISOR_TEST_DIR=$(SOURCE_ROOT)/tools/tests_hypervisor
 
 BOOTLOADER	= boot.S
 
@@ -51,28 +56,30 @@ OBJS 		= boot.o	\
 	$(HYPERVISOR_HW_HWLIB_DIR)/vgic.o				\
 	$(HYPERVISOR_HW_HWLIB_DIR)/trap.o
 
-OBJS 		+=	$(COMMON_SOURCE_DIR)/test/tests.o	\
-	$(COMMON_SOURCE_DIR)/test/tests_gic_timer.o		\
-	$(COMMON_SOURCE_DIR)/test/tests_vdev.o			\
-	$(COMMON_SOURCE_DIR)/test/tests_malloc.o
+#Testing codes
+OBJS 		+=	$(HYPERVISOR_TEST_DIR)/tests.o	\
+	$(HYPERVISOR_TEST_DIR)/tests_gic_timer.o		\
+	$(HYPERVISOR_TEST_DIR)/tests_vdev.o			\
+	$(HYPERVISOR_TEST_DIR)/tests_malloc.o
 
-OBJS 		+=	$(COMMON_SOURCE_DIR)/log/string.o	\
-	$(COMMON_SOURCE_DIR)/log/format.o				\
-	$(COMMON_SOURCE_DIR)/log/print.o				\
+OBJS 		+=	$(LIB_DIR)/string.o	\
+	$(LIB_DIR)/format.o				\
+	$(LIB_DIR)/print.o				\
 
 LD_SCRIPT	= model.lds.S
 
-OBJS 		+= drivers/uart/uart_print.o
+OBJS 		+= $(SOURCE_ROOT)/drivers/uart/uart_print.o
 
-INCLUDES    = -I $(HYPERVISOR_SOURCE_DIR)/include -I $(HYPERVISOR_SOURCE_DIR)
-INCLUDES    += -I $(HYPERVISOR_HW_DIR)/include
-INCLUDES    += -I $(HYPERVISOR_HW_HWLIB_DIR)
-INCLUDES    += -I. -I $(COMMON_SOURCE_DIR) -I $(COMMON_SOURCE_DIR)/include
-INCLUDES    +=  -I ./include
+INCLUDES    = -I $(HYPERVISOR_HW_DIR)/include
+INCLUDES    += -I $(HYPERVISOR_HW_DIR)/libhw
+INCLUDES    += -I $(SOURCE_ROOT) -I $(LIB_DIR)
+INCLUDES    += -I $(HYPERVISOR_TEST_DIR)
+INCLUDES    += -I . -I ./include
+INCLUDES    += -I $(SOURCE_ROOT)/include -I $(HYPERVISOR_SOURCE_DIR)
 
-GUEST0BIN	= ./guestimages/guest0.bin
-GUEST1BIN	= ./guestimages/guest1.bin
-SEMIIMG 	= hvc-man-switch.axf
+GUEST0BIN	= $(BUILD_DIR)/guestimages/guest0.bin
+GUEST1BIN	= $(BUILD_DIR)/guestimages/guest1.bin
+SEMIIMG 	= $(BUILD_DIR)/hvc-man-switch.axf
 MONITORMAP	= monitor.map
 
 CPPFLAGS	+= $(CONFIG_FLAGS) $(INCLUDES)
@@ -84,8 +91,8 @@ NM		= $(CROSS_COMPILE)nm
 #for armflash.bin
 OBJCOPY		= $(CROSS_COMPILE)objcopy
 DD		= dd
-HYPBIN		= hvc-man-switch.bin
-FLASHIMG	= armflash.bin
+HYPBIN		= $(BUILD_DIR)/hvc-man-switch.bin
+FLASHIMG	= $(BUILD_DIR)/armflash.bin
 
 # These are needed by the underlying kernel make
 export CROSS_COMPILE ARCH

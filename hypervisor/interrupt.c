@@ -2,7 +2,7 @@
 #include <hvmm_types.h>
 #include <guest.h>
 #include <hvmm_trace.h>
-#include <log/uart_print.h>
+#include <lib/uart_print.h>
 #include <interrupt.h>
 #include <smp.h>
 

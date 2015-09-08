@@ -3,9 +3,9 @@
 #include <asm_io.h>
 #include <asm-arm_inline.h>
 #include <guest.h>
-#include <log/print.h>
+#include <lib/print.h>
 #include <memory.h>
-#include <log/string.h>
+#include <lib/string.h>
 
 #define l1_tbl_index_offset 20
 #define l2_tbl_index_offset 12

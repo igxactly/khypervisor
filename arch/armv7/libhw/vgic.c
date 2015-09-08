@@ -6,8 +6,8 @@
 #include <guest.h>
 #include <asm-arm_inline.h>
 
-#include <log/print.h>
-#include "../../../guestbuilding/pc/k-hypervisor-config.h"
+#include <lib/print.h>
+#include <k-hypervisor-config.h>
 
 /* for test, surpress traces */
 #define __VGIC_DISABLE_TRACE__

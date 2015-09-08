@@ -10,7 +10,7 @@
 #include <hvmm_trace.h>
 #include <timer.h>
 #include <interrupt.h>
-#include <log/print.h>
+#include <lib/print.h>
 #include <smp.h>
 
 static timer_callback_t _host_callback[2];

@@ -5,9 +5,9 @@
 #include "memory.h"
 #include "armv7_p15.h"
 
-#include <log/print.h>
+#include <lib/print.h>
 
-#include "../../platform-device/pc/k-hypervisor-config.h"
+#include <k-hypervisor-config.h>
 
 hvmm_status_t hvmm_tests_malloc(void)
 {

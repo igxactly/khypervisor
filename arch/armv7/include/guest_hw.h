@@ -1,12 +1,12 @@
 #ifndef _GUEST_HW_H__
 #define _GUEST_HW_H__
 
-#include <test/tests.h>
+#include <k-hypervisor-config.h>
+#include <tools/tests_hypervisor/tests.h>
 #include <version.h>
-#include <log/print.h>
+#include <lib/print.h>
 #include <hvmm_trace.h>
 #include <vgic.h>
-#include "../../../platform-device/pc/k-hypervisor-config.h"
 
 #define ARCH_REGS_NUM_GPR    13
 

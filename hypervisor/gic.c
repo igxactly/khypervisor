@@ -1,6 +1,6 @@
 #include "gic.h"
 #include "gic_regs.h"
-#include <log/uart_print.h>
+#include <lib/uart_print.h>
 #include <hvmm_trace.h>
 #include <armv7_p15.h>
 /* #ifdef _SMP_ */

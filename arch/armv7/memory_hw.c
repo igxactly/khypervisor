@@ -3,11 +3,11 @@
 #include <hvmm_trace.h>
 #include <lpae.h>
 #include <memory.h>
-#include <log/print.h>
-#include <log/uart_print.h>
+#include <lib/print.h>
+#include <lib/uart_print.h>
 #include <guest.h>
 #include <smp.h>
-#include "../../guestbuilding/pc/k-hypervisor-config.h"
+#include <k-hypervisor-config.h>
 
 /**
  * \defgroup Memory_Attribute_Indirection_Register

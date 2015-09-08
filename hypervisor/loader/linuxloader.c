@@ -2,7 +2,7 @@
 
 #include "../../lib/string.h"
 #include "../../platform-device/cortex_a15x2_rtsm/guestos/guestloader/guestloader.h"
-#include "../../platform-device/pc/k-hypervisor-config.h"
+#include <k-hypervisor-config.h>
 
 /* list of possible tags */
 #define ATAG_NONE       0x00000000

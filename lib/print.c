@@ -1,7 +1,7 @@
-#include "../lib/print.h"
+#include <lib/print.h>
 
-#include "../lib/format.h"
-#include "../lib/uart_print.h"
+#include <lib/format.h>
+#include <lib/uart_print.h>
 
 void init_print()
 {

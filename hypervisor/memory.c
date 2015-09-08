@@ -1,8 +1,8 @@
 #include <k-hypervisor-config.h>
 #include <memory.h>
 #include <arch_types.h>
-#include <log/print.h>
-#include <log/uart_print.h>
+#include <lib/print.h>
+#include <lib/uart_print.h>
 
 static struct memory_ops *_memory_ops;
 

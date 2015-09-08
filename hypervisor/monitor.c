@@ -6,8 +6,8 @@
 #include <interrupt.h>
 #include <monitor.h>
 #include <arch_types.h>
-#include <log/print.h>
-#include <log/uart_print.h>
+#include <lib/print.h>
+#include <lib/uart_print.h>
 #include <asm_io.h>
 #include <armv7_p15.h>
 #include <guest.h>

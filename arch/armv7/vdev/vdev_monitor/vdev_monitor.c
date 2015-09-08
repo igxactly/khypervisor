@@ -4,7 +4,7 @@
  */
 #include <vdev.h>
 #define DEBUG
-#include <log/print.h>
+#include <lib/print.h>
 #include <monitor.h>
 #include <asm_io.h>
 #include <guest.h>

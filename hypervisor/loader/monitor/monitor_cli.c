@@ -3,8 +3,8 @@
 #include <arch_types.h>
 #include <gic.h>
 #define DEBUG
-#include <log/print.h>
-#include <log/uart_print.h>
+#include <lib/print.h>
+#include <lib/uart_print.h>
 
 volatile uint32_t *base_set =
         (uint32_t *) (VDEV_MONITORING_BASE + MONITOR_WRITE_TRACE_GUEST);

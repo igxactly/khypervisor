@@ -1,6 +1,6 @@
 #ifndef __INTERRUPT_H__
 #define __INTERRUPT_H__
-#include "../guestbuilding/pc/k-hypervisor-config.h"
+#include <k-hypervisor-config.h>
 #include "hvmm_types.h"
 
 #define HOST_IRQ 0

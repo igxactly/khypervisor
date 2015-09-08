@@ -23,10 +23,10 @@
  */
 
 #include <asm-arm_inline.h>
-#include <log/uart_print.h>
+#include <lib/uart_print.h>
 #include <gic.h>
-#include <test/tests.h>
-#include <test/test_vtimer.h>
+#include <tools/tests_hypervisor/tests.h>
+#include <tools/tests_hypervisor/test_vtimer.h>
 #ifdef _SMP_
 #include <smp.h>
 #endif

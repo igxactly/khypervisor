@@ -3,9 +3,9 @@
 #include <gic_regs.h>
 #include <asm-arm_inline.h>
 #include <gic.h>
-#include <log/print.h>
+#include <lib/print.h>
 
-#include "../../platform-device/pc/k-hypervisor-config.h"
+#include <k-hypervisor-config.h>
 
 hvmm_status_t hvmm_tests_vdev(void)
 {

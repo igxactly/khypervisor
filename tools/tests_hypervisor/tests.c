@@ -1,6 +1,6 @@
 #include "../tests_hypervisor/tests.h"
 
-#include "../guest_tests/tests_gic_timer.h"
+#include "../tests_hypervisor/tests_gic_timer.h"
 #include "../tests_hypervisor/tests_gic_timer.h"
 #include "../tests_hypervisor/tests_malloc.h"
 #include "../tests_hypervisor/tests_vdev.h"

@@ -1,10 +1,10 @@
 #include <guest_monitor.h>
 #include <monitor_cli.h>
-#include <log/string.h>
-#include <log/uart_print.h>
+#include <lib/string.h>
+#include <lib/uart_print.h>
 #include <asm-arm_inline.h>
 #define DEBUG
-#include <log/print.h>
+#include <lib/print.h>
 #include <gic.h>
 #include <guestloader_common.h>
 #ifdef _GDB_

@@ -1,7 +1,7 @@
 #include <lpae.h>
 
-#include <log/print.h>
-#include <log/uart_print.h>
+#include <lib/print.h>
+#include <lib/uart_print.h>
 
 /**
  * \defgroup LPAE_address_mask

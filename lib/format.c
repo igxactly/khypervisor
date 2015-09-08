@@ -1,4 +1,4 @@
-#include "../lib/format.h"
+#include <lib/format.h>
 
 #include "arch_types.h"
 #ifdef _SMP_

@@ -1,8 +1,8 @@
-#include <log/print.h>
+#include <lib/print.h>
 #include <hvmm_trace.h>
 #include <guest.h>
 #include <guest_hw.h>
-#include "../../guestbuilding/pc/k-hypervisor-config.h"
+#include <k-hypervisor-config.h>
 
 #define CPSR_MODE_USER  0x10
 #define CPSR_MODE_FIQ   0x11

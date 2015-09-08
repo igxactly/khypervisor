@@ -6,10 +6,10 @@
 #include <hvmm_trace.h>
 #include <gic_regs.h>
 #include <hvmm_types.h>
-#include <log/print.h>
-#include <log/uart_print.h>
+#include <lib/print.h>
+#include <lib/uart_print.h>
 
-#include "../../../guestbuilding/pc/k-hypervisor-config.h"
+#include <k-hypervisor-config.h>
 
 #define CBAR_PERIPHBASE_MSB_MASK    0x000000FF
 

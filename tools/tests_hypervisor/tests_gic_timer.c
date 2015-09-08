@@ -8,8 +8,8 @@
 #if defined(CFG_BOARD_ARNDALE)
 #include "pwm.h"
 #endif
-#include "../../guestbuilding/pc/k-hypervisor-config.h"
-#include <log/print.h>
+#include <k-hypervisor-config.h>
+#include <lib/print.h>
 #include <interrupt.h>
 
 static void test_start_timer(void)
